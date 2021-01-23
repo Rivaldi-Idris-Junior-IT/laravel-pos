@@ -11,6 +11,7 @@ class ProductController extends Controller
 {
     public function all(Request $request)
     {
+        
         $id = $request->input('id');
         $limit  = $request->input('limit', 6);
         $uuid  = $request->input('limit', 6);
@@ -19,7 +20,12 @@ class ProductController extends Controller
         $category = $request->input('category');
         $price_from = $request->input('price_from');
         $price_to = $request->input('price_to');
-        
+
+        try{
+            $user = auth()->userOrFail();
+        }catch(\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e){
+            return ResponseFormatter::error(['error' => 'Token not defined']);
+        }
 
         if($id)
         {           

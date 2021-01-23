@@ -42,7 +42,7 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'jwt', // token (sebelumnya)
             'provider' => 'users',
             'hash' => false,
         ],

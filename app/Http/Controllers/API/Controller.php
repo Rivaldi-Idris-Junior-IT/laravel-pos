@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -11,8 +11,9 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    // public function __construct()
-    // {
-    //     auth()->setDefaultDriver('api');
-    // }
+    public function __construct()
+    {
+        auth()->setDefaultDriver('api');
+    }
+    
 }
