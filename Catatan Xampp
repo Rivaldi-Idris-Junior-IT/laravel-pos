@@ -1,0 +1,6 @@
+Running Xampp
+> sudo /opt/lampp/lampp start
+
+Jika apache gagal di jalankan 
+> sudo /etc/init.d/apache2 stop
+> sudo /opt/lampp/lampp start

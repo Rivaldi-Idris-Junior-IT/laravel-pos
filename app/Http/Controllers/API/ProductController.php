@@ -28,9 +28,7 @@ class ProductController extends Controller
         }
 
         if($id)
-        {           
-            
-
+        {                       
             $product = Product::with('category')->find($id);
 
             if($product) 
